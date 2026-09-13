@@ -1,0 +1,22 @@
+{
+  "version": "3.1.3",
+  "guacamole_url": "/guacamole/",
+  "xrdp_host": "127.0.0.1",
+  "xrdp_port": 3389,
+  "bind": "127.0.0.1",
+  "port": 8787,
+  "storage": {
+    "primary_root": "/srv/lunarx-data",
+    "provider": "auto",
+    "loop_image": "/var/lib/lunarx-storage/primary.xfs",
+    "os_reserve_gib": 20,
+    "os_reserve_percent": 20,
+    "additional_mount_root": "/srv/lunarx-disks"
+  },
+  "app_store": {
+    "catalog": "/opt/lunarx-home/catalog/apps.json",
+    "flatpak_remote": "flathub",
+    "personal_backend": "flatpak-user",
+    "metadata_policy": "Only entries with an authoritative source URL are shown; availability is evaluated at runtime."
+  }
+}

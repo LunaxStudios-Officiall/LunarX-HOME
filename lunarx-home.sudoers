@@ -1,0 +1,2 @@
+Cmnd_Alias LUNARX_HOME_ADMIN = /usr/local/libexec/lunarx-admin, /usr/local/libexec/lunarx-terminal *
+lunarx-home ALL=(root) NOPASSWD: LUNARX_HOME_ADMIN

@@ -1,0 +1,58 @@
+name: lunarx-guacamole
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: guacamole_db
+      POSTGRES_USER: guacamole_user
+      POSTGRES_PASSWORD: ${GUAC_DB_PASSWORD}
+    volumes:
+      - guac_db:/var/lib/postgresql/data
+      - ./initdb.sql:/docker-entrypoint-initdb.d/001-initdb.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U guacamole_user -d guacamole_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    command: ["postgres", "-c", "shared_buffers=32MB", "-c", "max_connections=30", "-c", "work_mem=2MB", "-c", "maintenance_work_mem=32MB"]
+    mem_limit: 192m
+    cpus: 0.75
+    restart: unless-stopped
+  guacd:
+    image: guacamole/guacd:1.6.0
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 4822"]
+      interval: 15s
+      timeout: 5s
+      retries: 4
+      start_period: 5s
+    mem_limit: 256m
+    cpus: 1.5
+    restart: unless-stopped
+  guacamole:
+    image: guacamole/guacamole:1.6.0
+    depends_on:
+      db:
+        condition: service_healthy
+      guacd:
+        condition: service_started
+    environment:
+      GUACD_HOSTNAME: guacd
+      POSTGRESQL_ENABLED: "true"
+      JSON_ENABLED: "true"
+      JSON_SECRET_KEY: ${LUNARX_JSON_SECRET}
+      POSTGRESQL_HOSTNAME: db
+      POSTGRESQL_DATABASE: guacamole_db
+      POSTGRESQL_USERNAME: guacamole_user
+      POSTGRESQL_PASSWORD: ${GUAC_DB_PASSWORD}
+      WEBAPP_CONTEXT: ROOT
+      JAVA_OPTS: "-Xms64m -Xmx256m -XX:MaxMetaspaceSize=128m -XX:+UseSerialGC"
+    ports:
+      - "127.0.0.1:8080:8080"
+    mem_limit: 512m
+    cpus: 1.5
+    restart: unless-stopped
+volumes:
+  guac_db:

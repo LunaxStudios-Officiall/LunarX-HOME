@@ -1,0 +1,41 @@
+{
+  "version": "3.1.2",
+  "runner": "Chromium Playwright with intercepted HTTPS origin; bounded viewport batches",
+  "source": "packaged-source-tree",
+  "viewports": [
+    "360x800",
+    "390x844",
+    "412x915",
+    "430x932",
+    "768x1024",
+    "820x1180",
+    "1024x1366",
+    "1280x720",
+    "1366x768",
+    "1440x900",
+    "1920x1080"
+  ],
+  "checks": 356,
+  "passed": 356,
+  "failed": 0,
+  "console_or_page_errors": [],
+  "result": "PASS",
+  "batches": [
+    {
+      "name": "phone",
+      "checks": 133,
+      "passed": 133
+    },
+    {
+      "name": "tablet",
+      "checks": 98,
+      "passed": 98
+    },
+    {
+      "name": "desktop",
+      "checks": 125,
+      "passed": 125
+    }
+  ],
+  "note": "Production HTML/CSS/JS executed in real Chromium. Shared first-run/login/logout coverage is intentionally repeated per bounded batch. API responses are deterministic mocks because this QA host administratively blocks browser navigation to localhost HTTP; backend HTTP is validated separately."
+}

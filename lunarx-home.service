@@ -1,0 +1,34 @@
+[Unit]
+Description=LunarX Home portal
+After=network-online.target local-fs.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=lunarx-home
+Group=lunarx-home
+SupplementaryGroups=lunarx-shared
+WorkingDirectory=/opt/lunarx-home
+EnvironmentFile=-/etc/lunarx-home/home.env
+ExecStart=/usr/bin/python3 /opt/lunarx-home/app.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=false
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/etc/lunarx-home
+ReadWritePaths=/srv/lunarx-data /var/lib/lunarx-home /run/lunarx-home
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+LockPersonality=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

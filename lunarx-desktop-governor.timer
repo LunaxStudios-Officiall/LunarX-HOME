@@ -1,0 +1,13 @@
+[Unit]
+Description=Run LunarX Desktop governor every 30 seconds
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=30s
+AccuracySec=5s
+Persistent=true
+Unit=lunarx-desktop-governor.service
+
+[Install]
+WantedBy=timers.target
+
