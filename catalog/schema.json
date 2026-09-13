@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LunarX platform-aware application catalog",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generated_at",
+    "source",
+    "audit",
+    "apps"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "audit": {
+      "type": "object"
+    },
+    "unresolved": {
+      "type": "array"
+    },
+    "apps": {
+      "type": "array",
+      "minItems": 150,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "summary",
+          "developer",
+          "category",
+          "backend",
+          "installable",
+          "admin_only",
+          "source_url",
+          "license",
+          "architectures",
+          "platforms",
+          "launch_mode",
+          "privilege",
+          "providers"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{2,190}$"
+          },
+          "backend": {
+            "enum": [
+              "flatpak-user",
+              "ide-extension",
+              "verified-source",
+              "admin-apt-group"
+            ]
+          },
+          "architectures": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "x86_64",
+                "aarch64",
+                "all"
+              ]
+            }
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "native-ubuntu",
+                "android-proot",
+                "portable-linux",
+                "unknown",
+                "all"
+              ]
+            }
+          },
+          "launch_mode": {
+            "enum": [
+              "desktop-session",
+              "external",
+              "admin-service"
+            ]
+          },
+          "privilege": {
+            "enum": [
+              "user",
+              "admin"
+            ]
+          },
+          "icon_url": {
+            "type": "string"
+          },
+          "backend_requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "providers": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "provider",
+                "provider_type",
+                "platforms",
+                "architectures",
+                "install_method",
+                "launch_method",
+                "update_method",
+                "uninstall_method",
+                "source",
+                "scope",
+                "compatibility_status",
+                "reason"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "provider": {
+                  "enum": [
+                    "flatpak-user",
+                    "ide-extension",
+                    "verified-source",
+                    "admin-apt-group",
+                    "apt-system",
+                    "web-pwa",
+                    "unsupported",
+                    "vendor-apt",
+                    "pinned-deb"
+                  ]
+                },
+                "provider_type": {
+                  "type": "string"
+                },
+                "platforms": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "native-ubuntu",
+                      "android-proot",
+                      "portable-linux",
+                      "unknown",
+                      "all"
+                    ]
+                  }
+                },
+                "architectures": {
+                  "type": "array",
+                  "items": {
+                    "enum": [
+                      "x86_64",
+                      "aarch64",
+                      "all"
+                    ]
+                  }
+                },
+                "compatibility_status": {
+                  "enum": [
+                    "Native ARM64",
+                    "Native x86_64",
+                    "Native Linux",
+                    "Web/PWA fallback",
+                    "Available through compatible provider",
+                    "Source only",
+                    "Unavailable on this platform"
+                  ]
+                },
+                "requires_admin": {
+                  "type": "boolean"
+                },
+                "scope": {
+                  "enum": [
+                    "user",
+                    "system",
+                    "none"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
