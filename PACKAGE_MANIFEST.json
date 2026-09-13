@@ -1,0 +1,627 @@
+{
+  "schema_version": "2.0.0",
+  "product": "LunarX Home",
+  "version": "3.1.2",
+  "generated_at": "2026-09-12T19:30:00Z",
+  "license_status": "SEE_LICENSE_AUDIT",
+  "catalog_entries": 154,
+  "manifest_scope": "all clean source files excluding generated evidence: PACKAGE_MANIFEST.json, VALIDATION.json, FINAL_BUILD_REPORT.md, SHA256SUMS.txt",
+  "files": [
+    {
+      "path": "99-lunarx-memory.conf",
+      "bytes": 42,
+      "sha256": "07f40ee1e950f3ccff8895f959590ee4eecd113361062d0deb88b6d4edf68556"
+    },
+    {
+      "path": "ACCESSIBILITY_AUDIT.md",
+      "bytes": 486,
+      "sha256": "1d68e652343f7101fa6147bf7c55cbc5c733fe2eff2ef1ea41b7b36ca3db7b96"
+    },
+    {
+      "path": "ACCESSIBILITY_CHANGES.md",
+      "bytes": 368,
+      "sha256": "826f20d63da0d25494e334bcd7d38176c3c51416f51c9442f268bc35f40c3913"
+    },
+    {
+      "path": "ACCESSIBILITY_QA.md",
+      "bytes": 305,
+      "sha256": "0a434a24b6e89b209935f1947d81dcafface6eaa82af7f2397f22d4c76019f8d"
+    },
+    {
+      "path": "ADDITIONAL_DISKS.md",
+      "bytes": 532,
+      "sha256": "7fe0ada37313835c454602816df93f11def26cd164a7799450b227fb1f8377e6"
+    },
+    {
+      "path": "BACKUP_FORMAT_SPEC.md",
+      "bytes": 412,
+      "sha256": "564b7de53cfd1d944c66e93711cd8b76b9e85c04435723933a3ba48ad481b86d"
+    },
+    {
+      "path": "BACKUP_QA.md",
+      "bytes": 282,
+      "sha256": "f16a56ac821111f25dccc86944056d90dc060eddb5dd030efdc76e486437dc02"
+    },
+    {
+      "path": "CATALOG_ARM64_AUDIT.md",
+      "bytes": 4084,
+      "sha256": "2bf0a9cb48f3633068aaf65143483f7c9a55bc2fb1e209b4dc663da80b44f68b"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 5616,
+      "sha256": "76fae8043070d3a6c8cce61be4907aab25ea4bacdb19b53e9fc997aa5cd6f938"
+    },
+    {
+      "path": "COMPATIBILITY_CHANGES.md",
+      "bytes": 321,
+      "sha256": "a5a8d287d405de316ed05454fd95b971cd4a98804ec30964b6dfe66320a334b7"
+    },
+    {
+      "path": "COMPATIBILITY_MATRIX.md",
+      "bytes": 1742,
+      "sha256": "4e5059ec3f71601c596620d16b57697c3818909e822652a4ce074f7202e7aab5"
+    },
+    {
+      "path": "COMPATIBILITY_QA.md",
+      "bytes": 1190,
+      "sha256": "77f889fbab64275da9eec3e0f155f094aabb094f2e23a2537074d1c4a086969f"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 411,
+      "sha256": "3d0825f939440a0ffcb29fca22694fa41f239cbe12eeb0282e635c4c95a0d987"
+    },
+    {
+      "path": "DEPLOYMENT_SECURITY_GUIDE.md",
+      "bytes": 418,
+      "sha256": "1d98fc62d8785c112319e9b3fafcfd2c3728eaa850a50ea72c3c27456603fcff"
+    },
+    {
+      "path": "DEVELOPMENT.md",
+      "bytes": 509,
+      "sha256": "d19ee97d5b53c4bbd882c44bc8b03a6b6c23a4d04f3e0de760422a3280767b71"
+    },
+    {
+      "path": "DISASTER_RECOVERY_PLAN.md",
+      "bytes": 489,
+      "sha256": "03545e9268dbf0fb8821957ebd6f14ac8ef3313723fa9741619d546f0f166e40"
+    },
+    {
+      "path": "EXECUTION_LOG.md",
+      "bytes": 2011,
+      "sha256": "28e7d3806b394c41c62d510f89a9ca958d8e9e4efe7e9fe4df2256acc98e335a"
+    },
+    {
+      "path": "FUSION_REPORT.md",
+      "bytes": 2208,
+      "sha256": "4e9e5828bc25c67834a3d5ef32ada70863e1184c5cdd798ccbce48ff828a1925"
+    },
+    {
+      "path": "INSTALLATION.md",
+      "bytes": 2870,
+      "sha256": "4829f08f86696af38b87be191a8bc3a64722e21a9ba66759717787131ef8e29e"
+    },
+    {
+      "path": "INSTALLER_QA.md",
+      "bytes": 998,
+      "sha256": "f93492cf3fed2a75e6933aab236588e0c87bd965f6cd1893e048a7ba30fdff89"
+    },
+    {
+      "path": "INSTALL_COMMAND.txt",
+      "bytes": 433,
+      "sha256": "146f05de420a891d501c546f73217a8f6421a6f161aafb48fc2dbd0f700d139e"
+    },
+    {
+      "path": "KNOWN_LIMITATIONS.md",
+      "bytes": 1907,
+      "sha256": "5d12a1aad127b019591b74a68fee9a533adb21ccf320f41d21613dff61936acd"
+    },
+    {
+      "path": "LICENSE_AUDIT.md",
+      "bytes": 458,
+      "sha256": "d4e3b46444a46f8b234c9360dbf86313bd63ac2e720b7247c438cf63cc86330b"
+    },
+    {
+      "path": "MIGRATION_MAP.md",
+      "bytes": 944,
+      "sha256": "c1769297cde6da1372491fd77eac5060b49ce133dcfed6e45da3ddd266b6ab4f"
+    },
+    {
+      "path": "MIGRATION_PLAN.md",
+      "bytes": 1013,
+      "sha256": "184156c93507279729eeff924a08c8efd3e7c1e192a59a7cbf011627c2cbe005"
+    },
+    {
+      "path": "MIGRATION_REPORT.md",
+      "bytes": 1028,
+      "sha256": "1296c9d9a1d9fe3be6d65cf266950d06c784c5e994af5fecd9ebafd3dab3510d"
+    },
+    {
+      "path": "PLATFORM_LIMITATIONS.md",
+      "bytes": 391,
+      "sha256": "ec3a013a101ccf8f5cdf9d4bbc17f79e5b87b77cf3f849890237bb14242e33da"
+    },
+    {
+      "path": "PRIVACY.md",
+      "bytes": 494,
+      "sha256": "1f85a3d76ab4a3135a07fcc6fc1c6208e5c9cbd99e00a740939b5f071a9b9377"
+    },
+    {
+      "path": "PUBLISH_UPDATE_GUIDE.md",
+      "bytes": 1007,
+      "sha256": "b8d1279705004e2af20e72d722d18ec8af8adbf139d123a2e9ce530006823abd"
+    },
+    {
+      "path": "QA_REVIEW_1.json",
+      "bytes": 1005,
+      "sha256": "c72ca637d52388ddaf3f1680ed2af661926ada44c37c38f4def57eb30de8842f"
+    },
+    {
+      "path": "QA_REVIEW_2.json",
+      "bytes": 4366,
+      "sha256": "b8713882e5a4748a04bfa77306308ab8d60e949f1204c107b0e6f9cdf521cab5"
+    },
+    {
+      "path": "QA_REVIEW_3_METHOD.md",
+      "bytes": 462,
+      "sha256": "f7e882a8043e5c050c9a521ead709875c9354bdb37625c5750b1f809d9316d4a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4772,
+      "sha256": "d0b15ab1c03e0cc6819d46811c3df2c6e00c7cbc051f23faf1340ecfcd2ee34b"
+    },
+    {
+      "path": "RECOVERY_NOTES.md",
+      "bytes": 905,
+      "sha256": "cc78ffbdaaf1daf53e401354e524740a5754462a8e2eba93ba70fcb640da20e3"
+    },
+    {
+      "path": "RESTORE_GUIDE.md",
+      "bytes": 372,
+      "sha256": "93a6e4f4263044f4600a66fc2f8bfd67f41d041120273f527b6622ee9675bdd3"
+    },
+    {
+      "path": "ROLLBACK_GUIDE.md",
+      "bytes": 1151,
+      "sha256": "54d1adc782b5d75fa677c531290125b251da6013072831748914d844976b0b31"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 372,
+      "sha256": "a0652e779ef47ddf25b8961d5534ed7b756ac4b8c284b999437a2078df83d21a"
+    },
+    {
+      "path": "SECURITY_CHANGES.md",
+      "bytes": 704,
+      "sha256": "1271032a4499eb31e19fc45be68d866e21d70dc2a3b816ebb225a4e45131fc14"
+    },
+    {
+      "path": "SECURITY_TEST_REPORT.md",
+      "bytes": 515,
+      "sha256": "4fc02074290918951424cb6dac244a9b2860661915811f544949d7d6e4e8483c"
+    },
+    {
+      "path": "SOURCE_INSPECTION.json",
+      "bytes": 42112,
+      "sha256": "c46ea5b7ac35db7bd7e8383d2eef0ecf92917dea8f36a1d73fa623eb195c289c"
+    },
+    {
+      "path": "SYSTEM_REQUIREMENTS.md",
+      "bytes": 867,
+      "sha256": "72ea5d9c06801f2051b105e605371ebeffdea28085e927bf1980e4a03629cd7d"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 620,
+      "sha256": "7c9b3ede3a7e6017aba10950e0df994625cac19deffdf0383d2ce3a3c051dbb1"
+    },
+    {
+      "path": "THREAT_MODEL.md",
+      "bytes": 780,
+      "sha256": "2fe0cf08c4035020ef1a2fe024b33c86e5fe16c5778c45101e1aab461627b6ef"
+    },
+    {
+      "path": "TROUBLESHOOTING.md",
+      "bytes": 1852,
+      "sha256": "f2f37bd6559c5cda98cd57e78ce476cf654822c5b4cb225330abd12dbdd5c6a6"
+    },
+    {
+      "path": "UI_QA.md",
+      "bytes": 1584,
+      "sha256": "992c7bd05d6af52e74759a3a58b86c434685590a4702f4b1c32fdb64d69773f5"
+    },
+    {
+      "path": "UNINSTALL_AND_ROLLBACK.md",
+      "bytes": 769,
+      "sha256": "17eb2ee4e002dd7e745bdbbe86baea01e9377e10697cffa831d9ba1abd4ffea0"
+    },
+    {
+      "path": "UNRESOLVED_PROJECT_LICENSE.md",
+      "bytes": 654,
+      "sha256": "a7431b7eea37582fb4bd96add5ec93561890547f77f00e68e6c8f7987d4562f9"
+    },
+    {
+      "path": "UPDATE.md",
+      "bytes": 1689,
+      "sha256": "97c4af97ae59768f59d7651613e1ed9ed29c394656c63fedb17ed86d5ed6d95a"
+    },
+    {
+      "path": "UPDATER_QA.md",
+      "bytes": 1074,
+      "sha256": "3c6781f32d67591b176d1d5409b27a0acee854c857bac4d7f0631ba3457d6e53"
+    },
+    {
+      "path": "UPDATE_COMMAND.txt",
+      "bytes": 497,
+      "sha256": "7f53f02ad98b30dfdb80410107fea6e947128d6306bd15acea006f9e4194caee"
+    },
+    {
+      "path": "UPDATE_MANIFEST_SPEC.md",
+      "bytes": 378,
+      "sha256": "732ed4311cf86027c6aa31f94cb65f4318ee28a44db403d038d794028865f735"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "905360921e63f419d6a111dd3216bf28402f367ab9aa69444d80e97419600d80"
+    },
+    {
+      "path": "app.py",
+      "bytes": 111339,
+      "sha256": "5df34cea64f57b6d5e13de3810e883a9dd8fd3b144c1d1abd6af616eed7f3f2e"
+    },
+    {
+      "path": "avahi-daemon.conf",
+      "bytes": 1821,
+      "sha256": "53572ba86bba5043f043492ad48479637571518c88923bcd57053853612ffe1f"
+    },
+    {
+      "path": "bootstrap.sh",
+      "bytes": 1347,
+      "sha256": "b925e9fcf85ac0e256cd06561846cfd5beb3691960689fad3a4a8ae249d9ea43"
+    },
+    {
+      "path": "catalog/SOURCES.md",
+      "bytes": 1360,
+      "sha256": "fe449c09bd2e122f26a885530acb255ea3be7bfa84d3f43b2aeebc8e662c747b"
+    },
+    {
+      "path": "catalog/apps.json",
+      "bytes": 516796,
+      "sha256": "e2c14591c73d8d38ff228cdf4bac4c619f7d557f876efac01c6b888edc56ca0f"
+    },
+    {
+      "path": "catalog/schema.json",
+      "bytes": 4913,
+      "sha256": "e6bec253005cd1262b06c1a1d7aa32513c638ddf3e33887fb278103eb4a151b6"
+    },
+    {
+      "path": "config.json",
+      "bytes": 661,
+      "sha256": "bd80c6f08f09a4094f4c73b211afe1c2827f23b4aeef6a6feeec25aa6ade9814"
+    },
+    {
+      "path": "docs/APPLICATION_STORE.md",
+      "bytes": 1947,
+      "sha256": "d7a21549e69e6d1ead7553dcb4206aa8dd59cda84393b0664780dea7160bf2a1"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 1719,
+      "sha256": "133ed7e24b4cea235f120847dd3e15b05216f5a6b3facf5e800a48058f96a072"
+    },
+    {
+      "path": "docs/INSTALLATION.md",
+      "bytes": 1250,
+      "sha256": "a28f19e50c4c05a52bed5b6966eced2302aa2f675669a873e6e6b03198229a6c"
+    },
+    {
+      "path": "docs/MIGRATION.md",
+      "bytes": 723,
+      "sha256": "a2427cb7ebc7ac8ea41070ffb56a49fb5be6864b9397d625fdaaebce66a38124"
+    },
+    {
+      "path": "docs/PROVIDERS.md",
+      "bytes": 1416,
+      "sha256": "9ff41f9f14d2214a251d5bc4450536e01b2b321e0255868bf9c6dd5f1dd16560"
+    },
+    {
+      "path": "docs/SECURITY_MODEL.md",
+      "bytes": 1059,
+      "sha256": "2c3aa2a9b767161737b49c85f50efd1a0ffb3711f893b72cd2e7753f749cfa5c"
+    },
+    {
+      "path": "docs/STORAGE_AND_QUOTAS.md",
+      "bytes": 1152,
+      "sha256": "c11e6b05e86b2ac024ba0e096187c77e4c51de9b632145ad20e1099c1be1103c"
+    },
+    {
+      "path": "docs/THIRD_PARTY_AUDIT.md",
+      "bytes": 1556,
+      "sha256": "68a2d82bcaed58dca15132fc6e0a77b982fe591c26bbd727e5e123d516368709"
+    },
+    {
+      "path": "docs/UI_ACCEPTANCE.md",
+      "bytes": 658,
+      "sha256": "5edef498d8fc20ae79db497947abad2ddbd19ed9b37d8a9c4d067b241c88d63f"
+    },
+    {
+      "path": "guacamole-compose.yaml",
+      "bytes": 1676,
+      "sha256": "d52ed30d8fd1968bfe4bce2f6b1354fb08df27ffd8cdcb441db1432b91f4c9d8"
+    },
+    {
+      "path": "install.sh",
+      "bytes": 443,
+      "sha256": "3d5d3a4972f4f11801e1ad5eacf03129f797f9531013d99cb9bb5cbb65b1bc6b"
+    },
+    {
+      "path": "installer/lunarx_installer.py",
+      "bytes": 34054,
+      "sha256": "d640736b402119a18984c9a4fbb19c60b4343d8bc763d3b6dfbdb3b8c4893f0a"
+    },
+    {
+      "path": "installer/templates/nginx-lunarx.conf",
+      "bytes": 1059,
+      "sha256": "0624b17c393f9f69b8b1fec68eb7fb1603883e40df03294c2bd6c327aa5c7fb4"
+    },
+    {
+      "path": "installer/templates/nginx-map.conf",
+      "bytes": 77,
+      "sha256": "814c8981339e9eb1241e343b2da081bd04dd4f6ecdf82ab2db9d2300e45089dc"
+    },
+    {
+      "path": "lunarx-admin.py",
+      "bytes": 59150,
+      "sha256": "ed50018115474add681f2ad1d37856b6f559473d1b8357fe00ca5711ca4af4a6"
+    },
+    {
+      "path": "lunarx-desktop-governor.py",
+      "bytes": 12168,
+      "sha256": "169d16aa57b9aea0c92bd3befcdfe983ba56ac7ad202f54942821f5aea683791"
+    },
+    {
+      "path": "lunarx-desktop-governor.service",
+      "bytes": 462,
+      "sha256": "43473f7c653b5b59b371f9df4bb03f800eab876f08d476ac0b14c6a0b0185fca"
+    },
+    {
+      "path": "lunarx-desktop-governor.timer",
+      "bytes": 210,
+      "sha256": "ba147845d04cda1b9c0dd0066bcd4d1f006045aefadff33e4f9294d62e8fd704"
+    },
+    {
+      "path": "lunarx-desktop-session.py",
+      "bytes": 965,
+      "sha256": "ba30a0cb79f76dd93d28d06383a3ddc994a2ed52a64c9cdea33078517ce76db8"
+    },
+    {
+      "path": "lunarx-home.service",
+      "bytes": 824,
+      "sha256": "100338dcc96fd0d50bd27a816caeef151d856ce6d9e62df2e8119a89a7d4a1ed"
+    },
+    {
+      "path": "lunarx-home.sudoers",
+      "bytes": 152,
+      "sha256": "65917b2a3d3a1b70d03109a337b8afd126a2ff11f99a1313bf6df71542f3a524"
+    },
+    {
+      "path": "lunarx-terminal",
+      "bytes": 451,
+      "sha256": "f602b185d34871252ef1a1d74b2217554579da0509cdade19b3bc93f08f846ce"
+    },
+    {
+      "path": "lunarx-user-apps",
+      "bytes": 241,
+      "sha256": "e5c4deb411994c1805e2c834ea6b715d8f489c7663b005ce20c5d7d2b541f4af"
+    },
+    {
+      "path": "lunarx_core/__init__.py",
+      "bytes": 65,
+      "sha256": "a41391e31cb1e81502dbae54b96d5ae9b877548e1f95a4cc62fc3a4dfff8419f"
+    },
+    {
+      "path": "lunarx_core/appstore.py",
+      "bytes": 9375,
+      "sha256": "73d0cdc41d777ed5da9da813a0383f130f8d9a7cb6fa910e586273ba1dbee502"
+    },
+    {
+      "path": "lunarx_core/auth.py",
+      "bytes": 2772,
+      "sha256": "0703f7478f792b7830557b82b74335a4891111e0de10b26ad8301fd24f7be4b2"
+    },
+    {
+      "path": "lunarx_core/broker.py",
+      "bytes": 40309,
+      "sha256": "052e6da5fc67cd01a699f0b7e7afef6d1963ec92b3a3e0c7e30d101ba728dc22"
+    },
+    {
+      "path": "lunarx_core/catalog.py",
+      "bytes": 12880,
+      "sha256": "39a44912541e48a6957c42f7f662e1ccd8d7a6f5d0b9fe0b21405080b5acfa2d"
+    },
+    {
+      "path": "lunarx_core/paths.py",
+      "bytes": 5219,
+      "sha256": "1d410bcf25ff72b465c7badbe5bba312fc76d9dd14a11032d732eb5d0370472e"
+    },
+    {
+      "path": "lunarx_core/platform.py",
+      "bytes": 8607,
+      "sha256": "945b386e91fc5f2d5aae3e4f5bc7b7ea8ee3bcc642be2f7476747176ca7576d6"
+    },
+    {
+      "path": "lunarx_core/providers.py",
+      "bytes": 4056,
+      "sha256": "e8bacfe02f95ada9f1d25723654e076a0304411dd73d25dfcaef5ae9d460d882"
+    },
+    {
+      "path": "lunarx_core/quota.py",
+      "bytes": 3813,
+      "sha256": "85f8a4384782b580a26e4b4f8d7b22a81baef9665bd7af36099d9e53f65cfb86"
+    },
+    {
+      "path": "lunarx_core/remote.py",
+      "bytes": 3696,
+      "sha256": "9751ce198e1b719de8f3e3d602a4c22d7f4560df4b4c577e1e33064ddce44d29"
+    },
+    {
+      "path": "lunarx_core/storage.py",
+      "bytes": 3355,
+      "sha256": "b25c4650bd0a7ec4378f1575379355db638c4c146a3e5512e26a2c358d3db6a9"
+    },
+    {
+      "path": "lunarx_core/vendor_apps.py",
+      "bytes": 2385,
+      "sha256": "287751eb5fb905ad6244a074db5b41d59d8dc1011a835a62bacee150cf9875a1"
+    },
+    {
+      "path": "lunarxctl",
+      "bytes": 4783,
+      "sha256": "8aefe0b86a357876a83974fe37beb76c064f6082ca06b534e6161cc89a3a626c"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 486,
+      "sha256": "4afe9fd6e3d575e9c7c1f78e594881fc116ebed50e57c2e663cec1bf4dd2cc23"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 38,
+      "sha256": "9a7a81c77689321e41446310fa66f98f45e65016a9e20b728ef24ef0c4d778f2"
+    },
+    {
+      "path": "static/app.js",
+      "bytes": 41753,
+      "sha256": "d5a9880a958c604b7b9cbaf30cb8dca75ba802ff5e13aa2dcae454e8eb12ad7f"
+    },
+    {
+      "path": "static/assets/app-fallback.svg",
+      "bytes": 611,
+      "sha256": "e126a0c65aeb66f241d9a084e6fbbae46498dc38e1fc87ab5eca07e0ce1573a5"
+    },
+    {
+      "path": "static/assets/icons.svg",
+      "bytes": 2928,
+      "sha256": "235d822dfd75b706b64a24e41bbeeec15288a17e1044361a0013dec8a3c92f1b"
+    },
+    {
+      "path": "static/assets/lunarx-logo-v2.png",
+      "bytes": 675318,
+      "sha256": "3b09ed3d6cd082bcf9311431bfb562850758f7971ef6d8d6f0c1e68f6e499e6c"
+    },
+    {
+      "path": "static/index.html",
+      "bytes": 27617,
+      "sha256": "05f2a5c7007fef3c18cde3103af286f7a14d80010fc640d739ddfafd710a841d"
+    },
+    {
+      "path": "static/store.js",
+      "bytes": 14520,
+      "sha256": "5737bb1071cfd021aa2ef8e3884ff3eb2e42fe2910e2f7fee64ebf23f1b08890"
+    },
+    {
+      "path": "static/styles.css",
+      "bytes": 31753,
+      "sha256": "b326825ba558354546a7dd5ff21bf678cd9a9044f961638f23140c87a681e776"
+    },
+    {
+      "path": "static/vendor/XTERM-LICENSE.txt",
+      "bytes": 2692,
+      "sha256": "75df6dddd5b61fa374d14743128a11ce5a07839a97bbadeb3ac7b7d59573920b"
+    },
+    {
+      "path": "static/vendor/xterm.css",
+      "bytes": 5383,
+      "sha256": "832f3f2c603b43ad4351ff04970150cc7a873014276db126a6065c6dd81e4872"
+    },
+    {
+      "path": "static/vendor/xterm.js",
+      "bytes": 279849,
+      "sha256": "4af5af451244ba10f6b3b9a9577fd71b8855879c0277a3fd313951c3dca7f99d"
+    },
+    {
+      "path": "tests/conftest.py",
+      "bytes": 144,
+      "sha256": "6d34c88cfc06ba1a91f2333fa65f64d270aaa45f686f86b551dbb9dfbef88085"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 3304,
+      "sha256": "d36b707613987c862584f9c3bc9eee9eebc4f24acee03380c816b9832cdac87b"
+    },
+    {
+      "path": "tests/test_product_contract.py",
+      "bytes": 1548,
+      "sha256": "1a13d4e46ebc3fd94108845b5c836a429c53dc9b211293dbb557aa025a267da8"
+    },
+    {
+      "path": "tests/test_v311_patch.py",
+      "bytes": 10786,
+      "sha256": "7ad442d75e8bdb31a7a4e48dbfe955e46859abe278b775bc740c46c48010037a"
+    },
+    {
+      "path": "tests/test_v312_hardening.py",
+      "bytes": 14486,
+      "sha256": "3744b29ba99c04f49873d1a300df8c7283b70a6bff02bafca79521a991b685c7"
+    },
+    {
+      "path": "tests/test_v31_fusion.py",
+      "bytes": 8885,
+      "sha256": "78d034509b869595055713de9998c9a8a5fcc269641fec28419dc179d6a25798"
+    },
+    {
+      "path": "tests/test_vnext.py",
+      "bytes": 4020,
+      "sha256": "03067744310b4e8b42d538fc99f3cfa90aecd16b7519c60a1626b3c078025a5a"
+    },
+    {
+      "path": "tools/browser_qa.py",
+      "bytes": 31801,
+      "sha256": "6c2d0f2782f5c0515c4178791e99a6f5267e390a0ceb1d6ff53e35258978cb95"
+    },
+    {
+      "path": "tools/package_release.py",
+      "bytes": 5311,
+      "sha256": "540159d60b10e0a82f819dbbdcc81b94edafd59f15032c57ccd42d7eccc74c13"
+    },
+    {
+      "path": "tools/validate_release.py",
+      "bytes": 9594,
+      "sha256": "733d9d8774f764050d071153eb581b2f2777ad8b4ec643a8cf1b5d52bb682ce2"
+    },
+    {
+      "path": "tools/verify_release.py",
+      "bytes": 2953,
+      "sha256": "f017700dab4c65075aa1f46bc7e75a6782849286a71e1a486a04a8010ee7036c"
+    },
+    {
+      "path": "user-slice-lunarx.conf",
+      "bytes": 116,
+      "sha256": "d62b54bf9fb02801e0e91aa01c7df1c37671530d5942b66d5adf2a50261d7290"
+    }
+  ],
+  "tree_file_count": 119,
+  "tree_bytes": 2139335,
+  "exclusions": [
+    ".git",
+    ".pytest_cache",
+    ".venv",
+    "FINAL_BUILD_REPORT.md",
+    "PACKAGE_MANIFEST.json",
+    "SHA256SUMS.txt",
+    "VALIDATION.json",
+    "__pycache__",
+    "build",
+    "dist",
+    "home.env",
+    "node_modules",
+    "packaging",
+    "quotas.json",
+    "setup-token",
+    "state.json",
+    "validation"
+  ]
+}

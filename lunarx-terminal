@@ -1,0 +1,10 @@
+#!/bin/sh
+# Fixed-purpose terminal launcher. It accepts one validated LunarX administrator.
+set -eu
+[ "$#" -eq 1 ] || exit 2
+case "$1" in *[!a-z0-9_-]*|'') exit 2 ;; esac
+id "$1" >/dev/null 2>&1 || exit 2
+id -nG "$1" | tr ' ' '\n' | grep -qx lunarx-admin || exit 2
+home_dir="$(getent passwd "$1" | cut -d: -f6)"
+[ -n "$home_dir" ] && [ -d "$home_dir" ] || exit 2
+exec /usr/sbin/runuser -u "$1" -- /bin/bash --noprofile --rcfile "$home_dir/.bashrc" -i

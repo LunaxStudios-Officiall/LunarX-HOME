@@ -1,0 +1,204 @@
+{
+  "version": "3.1.2",
+  "result": "PASS",
+  "checks": 38,
+  "passed": 38,
+  "failed": 0,
+  "checks_detail": [
+    {
+      "check": "baseline-extracted",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "baseline-first-run-token-present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "baseline-install-health",
+      "pass": true,
+      "detail": "3.1.1 on 127.0.0.1:8787"
+    },
+    {
+      "check": "first-admin-created",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "baseline-login",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "update-no-new-token",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "update-reports-configured-port",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "updated-health",
+      "pass": true,
+      "detail": "{'ok': True, 'service': 'lunarx-home', 'version': '3.1.2', 'storage': True, 'platform': 'android-proot'}"
+    },
+    {
+      "check": "admin-state-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "profile-theme-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "settings-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "user-data-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "bind-port-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "lunarxctl-configured-endpoint",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "failed-update-reports-rollback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rollback-health",
+      "pass": true,
+      "detail": "restored 3.1.2 operational"
+    },
+    {
+      "check": "rollback-version-restored",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rollback-config-restored",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "rollback-data-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "uninstall-code-removed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "uninstall-data-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "uninstall-config-preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "uninstall-control-symlink-removed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fresh-312-ready-summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fresh-312-listening-port",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fresh-312-local-url",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fresh-312-token-present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "fresh-312-health",
+      "pass": true,
+      "detail": "3.1.2 on 127.0.0.1:8787"
+    },
+    {
+      "check": "native-ubuntu-24.04-dry-plan",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "native-systemd-units-present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "catalog-total-154",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "android-proot-actionable-56",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "android-proot-source-only-1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "android-proot-unavailable-97",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unsupported-reasons-specific",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "conditional-apt-obeys-real-probe",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "x86-native-resolution-independent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "tailscale-proot-host-owned",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "limitations": [
+    "Native Ubuntu 24.04 path validated by simulated preflight/static unit inspection because the QA host is Debian 13 without an Ubuntu systemd disposable host.",
+    "Android/PRoot installation/update were executed in isolated PRoot-mode filesystem semantics on this Linux host; no physical Android handset was controlled.",
+    "Tailscale Android-host ownership was validated through platform logic; no live Android Tailscale daemon was available."
+  ]
+}

@@ -1,0 +1,10 @@
+LunarX Home 3.1.2 — update
+
+Run from the newly extracted 3.1.2 release:
+  sudo ./install.sh update   # native Ubuntu
+  ./install.sh update        # Ubuntu in Termux/PRoot
+
+Dry-run:
+  ./install.sh update --dry-run
+
+The updater backs up the current application/config state, stages 3.1.2, preserves persistent user data, restarts LunarX and verifies /healthz. Existing installs automatically restore the previous application/config snapshot if activation or post-update health verification fails.

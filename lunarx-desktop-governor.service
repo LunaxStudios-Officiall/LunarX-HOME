@@ -1,0 +1,20 @@
+[Unit]
+Description=LunarX Desktop cgroup and idle-session governor
+After=systemd-logind.service xrdp.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/lunarx-desktop-governor
+User=root
+Group=root
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/run/lunarx-home
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=false
+LockPersonality=true
+RestrictRealtime=true

@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+"""Small cross-platform LunarX service and diagnostics command."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from pathlib import Path
+import signal
+import subprocess
+import sys
+import urllib.error
+import urllib.request
+
+ROOT = Path(__file__).resolve().parent
+sys.path.insert(0, str(ROOT))
+from lunarx_core.paths import resolve_paths
+from lunarx_core.platform import capabilities, detect_platform
+
+
+PATHS = resolve_paths(ROOT)
+PID_FILE = PATHS.runtime_root / "lunarx-home.pid"
+LOG_FILE = PATHS.runtime_root / "lunarx-home.log"
+
+
+def _pid() -> int | None:
+    try:
+        value = int(PID_FILE.read_text(encoding="ascii").strip())
+        os.kill(value, 0)
+        return value
+    except (OSError, ValueError):
+        PID_FILE.unlink(missing_ok=True)
+        return None
+
+
+def start() -> int:
+    info = detect_platform(paths=PATHS)
+    if info.service_manager == "systemd":
+        return subprocess.call(["systemctl", "start", "lunarx-home.service"])
+    if _pid():
+        return 0
+    PATHS.ensure_dirs()
+    handle = LOG_FILE.open("ab")
+    process = subprocess.Popen([sys.executable, str(ROOT / "app.py")], cwd=ROOT, stdout=handle, stderr=subprocess.STDOUT, start_new_session=True, close_fds=True)
+    PID_FILE.write_text(str(process.pid) + "\n", encoding="ascii"); PID_FILE.chmod(0o600)
+    return 0
+
+
+def stop() -> int:
+    info = detect_platform(paths=PATHS)
+    if info.service_manager == "systemd":
+        return subprocess.call(["systemctl", "stop", "lunarx-home.service"])
+    pid = _pid()
+    if not pid:
+        return 0
+    try:
+        os.kill(pid, signal.SIGTERM)
+    except ProcessLookupError:
+        pass
+    PID_FILE.unlink(missing_ok=True)
+    return 0
+
+
+def _configured_port() -> int:
+    try:
+        value = json.loads(PATHS.config_file.read_text(encoding="utf-8"))
+        port = int(value.get("port", 8787)) if isinstance(value, dict) else 8787
+        return port if 1 <= port <= 65535 else 8787
+    except (OSError, ValueError, TypeError):
+        return 8787
+
+
+def health() -> dict[str, object]:
+    try:
+        with urllib.request.urlopen(f"http://127.0.0.1:{_configured_port()}/healthz", timeout=3) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except (OSError, ValueError, urllib.error.URLError) as exc:
+        return {"ok": False, "error": "health endpoint unavailable", "detail": str(exc)[:120]}
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("command", choices=["status", "start", "stop", "restart", "logs", "doctor", "repair", "update", "version", "paths"])
+    parser.add_argument("--source", type=Path, help="path to a newly extracted LunarX Home release; used only with update")
+    args = parser.parse_args()
+    if args.command == "start": return start()
+    if args.command == "stop": return stop()
+    if args.command == "restart": stop(); return start()
+    if args.command == "logs":
+        if LOG_FILE.exists(): print(LOG_FILE.read_text(encoding="utf-8", errors="replace")[-12000:])
+        return 0
+    if args.command == "version": print("3.1.2"); return 0
+    if args.command == "paths": print(json.dumps(PATHS.as_dict(), ensure_ascii=False, indent=2)); return 0
+    if args.command == "status": print(json.dumps({"ok": True, "pid": _pid(), "platform": detect_platform(paths=PATHS).as_dict(), "health": health()}, ensure_ascii=False, indent=2)); return 0
+    if args.command == "doctor": print(json.dumps({"ok": PATHS.data_root.is_dir(), "platform": capabilities(PATHS)}, ensure_ascii=False, indent=2)); return 0
+    if args.command == "repair":
+        PATHS.ensure_dirs(); print(json.dumps({"ok": True, "message": "directories repaired; user data was not changed"}, ensure_ascii=False)); return 0
+    if args.command == "update":
+        source = args.source
+        if source is None:
+            raw = os.environ.get("LUNARX_UPDATE_SOURCE", "").strip()
+            source = Path(raw).expanduser() if raw else None
+        if source is None:
+            print("Update source required. Extract the new release and run: lunarxctl update --source /path/to/LunarX-Home-NEW", file=sys.stderr)
+            return 2
+        release = source.resolve()
+        installer = release / "install.sh"
+        if release == ROOT.resolve():
+            print("Refusing an in-place self-update from the currently installed code tree. Point --source to the newly extracted release.", file=sys.stderr)
+            return 2
+        if not installer.is_file():
+            print(f"Invalid update source: {installer} was not found", file=sys.stderr)
+            return 2
+        return subprocess.call([str(installer), "update"])
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

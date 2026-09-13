@@ -1,0 +1,7 @@
+#!/bin/sh
+set -eu
+
+# Compatibility launcher retained for existing desktop shortcuts. Application
+# discovery, installation, updates and removal are owned by LunarX Home.
+[ "$#" -eq 0 ] || exit 2
+exec /usr/bin/xdg-open "http://lunarx.local/"

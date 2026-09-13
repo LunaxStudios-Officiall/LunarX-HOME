@@ -1,0 +1,15 @@
+LunarX Home 3.1.2 — install
+
+Ubuntu 24.04 / 26.04:
+  sudo ./install.sh install
+
+Ubuntu inside Termux/PRoot:
+  ./install.sh install
+
+Dry-run / inspect first:
+  ./install.sh install --dry-run
+
+Offline staging without starting:
+  ./install.sh install --no-start
+
+After a successful started install, LunarX prints the effective listener and local URL. A one-time FIRST_RUN_SETUP_TOKEN is printed only when no administrator exists yet.

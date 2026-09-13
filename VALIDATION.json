@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "evidence": {
+    "catalog_entries": 154,
+    "catalog_provider_records": 306,
+    "android_proot_decisions": 154,
+    "web_pwa_fallback_apps": 15,
+    "arm64_native_apps": 120,
+    "version": "3.1.2",
+    "file_count": 123,
+    "tree_bytes": 2172153,
+    "catalog_sha256": "e2c14591c73d8d38ff228cdf4bac4c619f7d557f876efac01c6b888edc56ca0f",
+    "node_syntax_checked": true,
+    "duplicate_function_check": "PASS",
+    "manifest_excluded_evidence": [
+      "FINAL_BUILD_REPORT.md",
+      "PACKAGE_MANIFEST.json",
+      "SHA256SUMS.txt",
+      "VALIDATION.json"
+    ]
+  },
+  "package": {
+    "version": "3.1.2",
+    "manifest_scope": "all clean source files excluding generated evidence: PACKAGE_MANIFEST.json, VALIDATION.json, FINAL_BUILD_REPORT.md, SHA256SUMS.txt",
+    "clean_source_files": 119,
+    "clean_source_bytes": 2139335
+  }
+}
